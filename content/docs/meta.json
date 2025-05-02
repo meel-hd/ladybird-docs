@@ -1,0 +1,31 @@
+{
+    "title": "Ladybird Documentation",
+    "defaultOpen": true,
+    "pages": [
+        "index",
+        "BuildInstructionsLadybird",
+        "AdvancedBuildInstructions",
+        "Troubleshooting",
+        "Testing",
+        "BuildProfilingInstructions",
+        "EditorConfiguration",
+        "HumanInterfaceGuidelines",
+        "GettingStartedContributing",
+        "CodingStyle",
+        "Patterns",
+        "StringFormatting",
+        "EventLoop",
+        "SmartPointers",
+        "ProcessArchitecture",
+        "LibWebFromLoadingToPainting",
+        "BrowsingContextsAndNavigables",
+        "CSSProperties",
+        "AddNewIDLFile",
+        "LibWebPatterns",
+        "CSSGeneratedFiles",
+        "DevTools",
+        "Porting",
+        "roadmap",
+        "..."
+    ]
+}
