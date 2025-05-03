@@ -21,7 +21,7 @@ function renameMdToMdx(dir) {
 }
 
 // Set root directory to start from
-const ROOT_DIR = path.resolve(__dirname, "content/docs");
+const ROOT_DIR = path.resolve(__dirname, "../content/docs");
 
 if (!fs.existsSync(ROOT_DIR)) {
   console.error("Directory not found:", ROOT_DIR);

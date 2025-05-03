@@ -3,8 +3,8 @@ const path = require("path");
 const { mkdirSync, existsSync, rmSync, copyFileSync } = fs;
 
 // CONFIG
-const SOURCE_DIR = path.resolve(__dirname, "Documentation");
-const TARGET_DIR = path.resolve(__dirname, "content/docs");
+const SOURCE_DIR = path.resolve(__dirname, "../Documentation");
+const TARGET_DIR = path.resolve(__dirname, "../content/docs");
 
 // Clean and prepare the target directory
 if (existsSync(TARGET_DIR)) {
@@ -14,15 +14,17 @@ mkdirSync(TARGET_DIR, { recursive: true });
 
 
 function processMarkdownFile(filePath, targetPath) {
-  const content = fs.readFileSync(filePath, "utf-8");
+  let content = fs.readFileSync(filePath, "utf-8");
   const filename = path.basename(filePath);
 
   // Extract the title from the first line that starts with #, or use the filename
-  let title = "";
+  let title = '"';
   const lines = content.split("\n").map(line => line.trim());
   for (const line of lines) {
     if (line.startsWith("#")) {
-      title = line.replace(/^#+\s*/, "").trim();
+      title += line.replace(/^#+\s*/, "").trim() + '"';
+      // remove the original title line from content
+      content = content.replace(line, "");
       break;
     }
   }
